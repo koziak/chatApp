@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java 8 - Chat App</title>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand">Chat App</a>
+</nav>
+
+
+<div class="container-fluid row main">
+    <div class="modal-body text-center col-md-4 offset-4" id="usernamePage">
+        <h5>Join chat</h5>
+
+        <form id="usernameForm" name="usernameForm">
+            <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+            <button type="submit" data-dismiss="modal" class="btn btn-primary">Start Chatting</button>
+        </form>
+
+    </div>
+    <div class="column col-md-4 hidden" id="onlineListWrapper">
+        <div class="online-list">
+            <div class="header">
+                <h4>Online list</h4>
+            </div>
+            <div class="body" id="onlineList">
+            </div>
+        </div>
+    </div>
+    <div class="column col-md-8 hidden" id="chatWindow">
+        <div class="chat-window">
+            <div class="header">
+                <h4>Chat</h4>
+            </div>
+            <div class="body" id="messageArea">
+                <div class="keyboard">
+                    <form id="messageForm">
+                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                        <button type="submit" class="hidden">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container text-center">
+        <p class="text-muted"><a href="mailto:w.koziak@aol.com" target="_top">Wiktor Koziak</a> - Album no: 279734</p>
+        <p class="text-muted">Mechatronic Engineering</p>
+    </div>
+</footer>
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<script src="./js/sockjs.min.js"></script>
+<script src="./js/stomp.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
